@@ -1,0 +1,451 @@
+extends ./layouts/master.pug
+
+block title
+	title UradiTo - Сервис поиска ответственных исполнителей
+
+block manifestBrowserconfigFiles
+	link(href='../manifest.json', rel='manifest')
+	meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+
+	header.header
+		.container.header__container
+			.header__row
+				.header__burger.js-show-menu
+					img(src=require('images/menu.svg') alt="")
+				.header__logo
+					img(src=require('images/logo.svg') alt="")
+				nav.header__menu.menu
+					ul.menu__ul
+						li.menu__item
+							a.menu__link(href="") Приложение
+						li.menu__item
+							a.menu__link(href="") Компаниям
+						li.menu__item
+							a.menu__link(href="") О платформе
+				.header__right
+					a.header__contact(href="") Связаться
+					a.btn.header__btn(href="") Скачать
+					.header__lang
+						a.lang__link(href="")
+							img(src=require('images/flag-for-serbia.svg') alt="serbia")
+
+
+	section.hero
+		.container.hero__container
+			.hero__content
+				h1.hero__title Сервис поиска ответственных исполнителей
+				.hero__text Только верифицированные специалисты из 40+ областей со страховкой до 100,000 динар и опытом от 2х лех
+				.hero__image
+					img(src=require('images/hero.png') alt="")
+				.hero__bottom
+					a.btn.hero__btn(href="") Искать
+					.hero__question Кто вам нужен?
+
+
+
+	section.advantages
+		.container.advantages__container
+			.advantages__row
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-1.svg') alt="")
+					.advantage__label Штатные <br>сотрудники компании
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-2.svg') alt="")
+					.advantage__label Доступ и <br>техподдержка 24/7
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-3.svg') alt="")
+					.advantage__label Интуитивно <br>понятный интерфейс
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-4.svg') alt="")
+					.advantage__label Более 3000 <br>профкссионалов в базе
+
+
+	section.specialists
+		.container.specialists__container
+			.specialists__pretitle 1040 Предожений за 24 часа
+			h2.specialists__title Популярные специалисты и категории
+			.specialists__categories.categories
+				.categories__inner
+					.categories__nav.categories__nav--left.js-prev-category
+					.categories__category.category.category--active.js-set-category(data-id="1")
+						.category__icon
+							img(src=require('images/cat-1.svg'))
+						.category__label Уборка
+					.categories__category.category.js-set-category(data-id="2")
+						.category__icon
+							img(src=require('images/cat-2.svg'))
+						.category__label Ремонт техники
+					.categories__category.category.js-set-category(data-id="3")
+						.category__icon
+							img(src=require('images/cat-3.svg'))
+						.category__label Финансы
+					.categories__category.category.js-set-category(data-id="4")
+						.category__icon
+							img(src=require('images/cat-4.svg'))
+						.category__label Фотография
+					.categories__category.category.js-set-category(data-id="5")
+						.category__icon
+							img(src=require('images/cat-5.svg'))
+						.category__label Репетитор
+					.categories__nav.categories__nav--right.js-next-category
+			.specialists__items
+
+				.specialists__item.specialist.specialist--active(data-id="1")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar-2.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--active.specialist--center(data-id="1")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--active(data-id="1")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar-3.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="2")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz2
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="2")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz2
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="2")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz2
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="3")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz3
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="3")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz3
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="3")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz3
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="4")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz4
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="4")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz4
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="4")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz4
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="5")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz5
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="5")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz5
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="5")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz5
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+
+	section.frendly
+		.container.frendly__container
+			.frendly__pretitle Работа в приложении проста на раз-два-три
+			h2.frendly__title UradiTo: Дружественный интерфейс понятный с первого использования
+			.frendly__text Платформа создана так, чтобы вы начали работу с ней сразу же после скачивания. Никаких сложных алгоритмов, спрятанных разделов и длительного поиска - все продумано так, чтобы выбор исполнителя занял несколько минут
+			a.frendly__btn.btn(href="") Попробовать
+			.frendly__steps.steps
+				.steps__step.step
+					.step__dot
+					.step__number 1
+					.step__row
+						.step__image
+							img(src=require('images/step-1.svg') alt="")
+						.step__info
+							.step__title Скачайте и регистрируйтесь на платформе
+							.step__text Заполните данные, чтобы исполнитель <br>мог оперативно связаться с вами
+				.steps__step.step
+					.step__dot
+					.step__number 2
+					.step__row
+						.step__image
+							img(src=require('images/step-2.svg') alt="")
+						.step__info
+							.step__title Выбирайте специалиста в каталоге
+							.step__text Используйте нужный раздел, поиск <br>и фильтрацию для поиска идеального варианта
+				.steps__step.step
+					.step__dot
+					.step__number 3
+					.step__row
+						.step__image
+							img(src=require('images/step-3.svg') alt="")
+						.step__info
+							.step__title Оставляйте заказ и ждите выполнения
+							.step__text Нажимайте на кнопку заказать, чтобы <br>выбранный исполнитель помог решить ваш запрос
+				.steps__line
+
+
+	section.finder
+		.container.finder__container
+			.finder__inner
+				.finder__image
+					picture
+						source(srcset=require('images/bg-find-mobile.jpg') media="(max-width: 767px)")
+						img(src=require('images/bg-find.jpg') alt="")
+				h2.finder__title Найдите исполнителя
+				.finder__text Оцените удобство приложения
+				a.finder__btn.btn Скачать приложение
+
+
+	section.insurance
+		.container.insurance__container
+			.insurance__inner
+				.insurance__image
+					img(src=require('images/pig.svg') alt="")
+				.insurance__info
+					.insurance__title Все работы застрахованы:	<br>компенсируем ущерб <br>в неприятных ситуациях
+					.insurance__text Сотрудники каждой компании имеют огромное преимущество перед фрилансерами - все их работы застрахованы. В случае возникновения поломок, испорченных вещей или других неприятностей, вам будет компенсирован весь нанесенный ущерб. <br><br>Компания и их исполнители застрахованы в ведущих известных организациях, отвечающих за свою репутацию. Вы и ваше имущество будет в полной безопасности
+
+
+
+	section.garants
+		.container.garants__container
+			.garants__inner
+				.garants__title Личная ответственность профессионала <br>и гарантии от компаний
+				.garants__text UradiTo - сервис, где вы найдете исполнителя, но получите сервис компаний. <br>Больше преимущества для вас:
+				.garants__slider
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Безопасные платежи
+						.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
+				.garants__comment Оцените преимущества конкретного специалиста, но с поддержкой целой компании. Скачивайте приложение и выбирайте нужного исполнителя
+
+
+	section.profit
+		.container.profit__container
+			.profit__title Заказчики услуг о пользе сервиса
+			.profit__text Приложение UradiTo рекомендуют, его скачивают каждый день сотни раз и находят исполнителей для выполнения разного вида работ. Оцените удобство сервиса, экономьте часы на поиски и освобождайте время для действительно важных дел. <br>Те, кто уже использует приложение, активно делятся впечателниями, вот лишь некоторые из них:
+			.profit__image
+				img(src=require('images/prof.jpg') alt="")
+
+
+	section.audios
+		.container.audios__container
+			.audios__inner
+				.audios__item.audio
+					.audio__top
+						.audio__avatar
+							img(src=require('images/avatar-4.png') alt="")
+						.audio__info
+							.audio__name Cooper Lipshutz
+							.audio__category Категория
+					.audio__player.js-audio-control
+						audio(preload="none")
+							source(src=require('audio/test.mp3') type="audio/mpeg")
+				.audios__item.audio
+					.audio__top
+						.audio__avatar
+							img(src=require('images/avatar-5.png') alt="")
+						.audio__info
+							.audio__name Cooper Lipshutz
+							.audio__category Категория
+					.audio__player.js-audio-control
+						audio(preload="none")
+							source(src=require('audio/test.mp3') type="audio/mpeg")
+				.audios__item.audio
+					.audio__top
+						.audio__avatar
+							img(src=require('images/avatar-6.png') alt="")
+						.audio__info
+							.audio__name Cooper Lipshutz
+							.audio__category Категория
+					.audio__player.js-audio-control
+						audio(preload="none")
+							source(src=require('audio/test.mp3') type="audio/mpeg")
+
+
+	section.reviews
+		.container.reviews__container
+			.reviews__title Отзывы заказчиков
+			.reviews__images
+				.reviews__image
+					img(src=require('images/rev-1.png') alt="")
+					img(src=require('images/rev-1.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-2.png') alt="")
+					img(src=require('images/rev-2.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-3.png') alt="")
+					img(src=require('images/rev-3.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-4.png') alt="")
+					img(src=require('images/rev-4.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-5.png') alt="")
+					img(src=require('images/rev-5.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-6.png') alt="")
+					img(src=require('images/rev-6.png') alt="")
+
+			.reviews__slider.r-slider
+				.r-slider__content
+					.r-slider__back
+					.r-slider__items
+						.r-slider__item
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
+					a.r-slider__btn.btn(href="") Спросить лично
+				.r-slider__nav
+					.r-slider__arrow.r-slider__arrow--left.disabled.js-review-prev
+					.r-slider__arrow.r-slider__arrow--right.js-review-next
+
+
+	section.downloads
+		.container.downloads__container
+			.downloads__inner
+				.downloads__text <strong>Все специалисты здесь</strong> <br>Поручите работу проверенным исполнителям
+				a.downloads__btn(href="") СКАЧАТЬ
+
+
+
+
+	footer.footer
+		.container.footer__container
+			.footer__row
+				.footer__left
+					.footer__logo
+						img(src=require('images/logo-footer.svg') alt="")
+					.footer__contacts “Компания”d.o.o. <br>11000, Serbia, Belgrade, Garvila Principa 43
+				nav.footer__menu.fmenu
+					ul.fmenu__ul
+						li.fmenu__item
+							a.fmenu__link(href="") О платформе
+						li.fmenu__item
+							a.fmenu__link(href="") Для компаний
+						li.fmenu__item
+							a.fmenu__link(href="") Соглашение
+						li.fmenu__item
+							a.fmenu__link(href="") Персональные данные
+						li.fmenu__item
+							a.fmenu__link(href="")
+
+			.footer__companies
+				.footer__company
+					img(src=require('images/com-1.svg') alt="")
+				.footer__company
+					img(src=require('images/com-2.svg') alt="")
+				.footer__company
+					img(src=require('images/com-3.svg') alt="")
+				.footer__company
+					img(src=require('images/com-4.svg') alt="")
+				.footer__company
+					img(src=require('images/com-5.svg') alt="")
+				.footer__company
+					img(src=require('images/com-6.svg') alt="")
+				.footer__company
+					img(src=require('images/com-7.svg') alt="")
