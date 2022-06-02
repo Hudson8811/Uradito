@@ -28,3 +28,27 @@ ul {
 li {
   list-style: none;
 }
+
+
+
+
+.wrapper{
+	width: 100%;
+	overflow: hidden;
+}
+
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	@include max(xl){
+		max-width: 1000px;
+	}
+	@include max(lg){
+		max-width: 740px;
+	}
+	@include max(md){
+		max-width: 100%;
+		padding: 0 vw(20);
+	}
+}

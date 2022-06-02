@@ -67,6 +67,8 @@ block content
 					.advantage__label Более 3000 <br>профкссионалов в базе
 
 
+
+
 	section.specialists
 		.container.specialists__container
 			.specialists__pretitle 1040 Предожений за 24 часа
@@ -74,26 +76,32 @@ block content
 			.specialists__categories.categories
 				.categories__inner
 					.categories__nav.categories__nav--left.js-prev-category
-					.categories__category.category.category--active.js-set-category(data-id="1")
-						.category__icon
-							img(src=require('images/cat-1.svg'))
-						.category__label Уборка
-					.categories__category.category.js-set-category(data-id="2")
-						.category__icon
-							img(src=require('images/cat-2.svg'))
-						.category__label Ремонт техники
-					.categories__category.category.js-set-category(data-id="3")
-						.category__icon
-							img(src=require('images/cat-3.svg'))
-						.category__label Финансы
-					.categories__category.category.js-set-category(data-id="4")
-						.category__icon
-							img(src=require('images/cat-4.svg'))
-						.category__label Фотография
-					.categories__category.category.js-set-category(data-id="5")
-						.category__icon
-							img(src=require('images/cat-5.svg'))
-						.category__label Репетитор
+					.categories__list
+						.categories__category.category.category--active.js-set-category(data-id="1")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-1.svg'))
+								.category__label Уборка
+						.categories__category.category.js-set-category(data-id="2")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-2.svg'))
+								.category__label Ремонт техники
+						.categories__category.category.js-set-category(data-id="3")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-3.svg'))
+								.category__label Финансы
+						.categories__category.category.js-set-category(data-id="4")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-4.svg'))
+								.category__label Фотография
+						.categories__category.category.js-set-category(data-id="5")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-5.svg'))
+								.category__label Репетитор
 					.categories__nav.categories__nav--right.js-next-category
 			.specialists__items
 
@@ -324,6 +332,26 @@ block content
 							img(src=require('images/garant-1.svg') alt="")
 						.garant__title Безопасные платежи
 						.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Страховка
+						.garant__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Безопасные платежи
+						.garant__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Страховка
+						.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Безопасные платежи
+						.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
 				.garants__comment Оцените преимущества конкретного специалиста, но с поддержкой целой компании. Скачивайте приложение и выбирайте нужного исполнителя
 
 
@@ -399,9 +427,17 @@ block content
 					.r-slider__items
 						.r-slider__item
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
+						.r-slider__item
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						.r-slider__item
+							p Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
+						.r-slider__item
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae.
+						.r-slider__item
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
 					a.r-slider__btn.btn(href="") Спросить лично
 				.r-slider__nav
-					.r-slider__arrow.r-slider__arrow--left.disabled.js-review-prev
+					.r-slider__arrow.r-slider__arrow--left.js-review-prev
 					.r-slider__arrow.r-slider__arrow--right.js-review-next
 
 
@@ -413,39 +449,3 @@ block content
 
 
 
-
-	footer.footer
-		.container.footer__container
-			.footer__row
-				.footer__left
-					.footer__logo
-						img(src=require('images/logo-footer.svg') alt="")
-					.footer__contacts “Компания”d.o.o. <br>11000, Serbia, Belgrade, Garvila Principa 43
-				nav.footer__menu.fmenu
-					ul.fmenu__ul
-						li.fmenu__item
-							a.fmenu__link(href="") О платформе
-						li.fmenu__item
-							a.fmenu__link(href="") Для компаний
-						li.fmenu__item
-							a.fmenu__link(href="") Соглашение
-						li.fmenu__item
-							a.fmenu__link(href="") Персональные данные
-						li.fmenu__item
-							a.fmenu__link(href="")
-
-			.footer__companies
-				.footer__company
-					img(src=require('images/com-1.svg') alt="")
-				.footer__company
-					img(src=require('images/com-2.svg') alt="")
-				.footer__company
-					img(src=require('images/com-3.svg') alt="")
-				.footer__company
-					img(src=require('images/com-4.svg') alt="")
-				.footer__company
-					img(src=require('images/com-5.svg') alt="")
-				.footer__company
-					img(src=require('images/com-6.svg') alt="")
-				.footer__company
-					img(src=require('images/com-7.svg') alt="")

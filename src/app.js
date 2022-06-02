@@ -4,7 +4,12 @@
 import 'styles/_app.scss'
 
 $(function() {
-  console.log('Ready!')
+	console.log('Ready!')
 
-  require('scripts/main')
+	require('scripts/slick')
+	require('scripts/jquery.touchSwipe.min')
+
+
+	require('scripts/main')
+	require('scripts/tabs')
 })
