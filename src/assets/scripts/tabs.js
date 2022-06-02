@@ -12,7 +12,7 @@ $(document).ready(function() {
 		allowPageScroll: "vertical",
 		threshold: 75
 	};
-	
+
 
 	if ($(window).width() < 768) {
 		tabsList.swipe(swipeOptions);
@@ -47,6 +47,7 @@ $(document).ready(function() {
 				}
 				selectTab(currentTab, speed);
 			} else {
+				currentTab = index;
 				selectTab(index, speed);
 			}
 		}
@@ -97,6 +98,7 @@ $(document).ready(function() {
 		if ($(window).width() < 768) {
 			scrollTabs(index, speed);
 		}
+
 		$('.category').eq(index).addClass('category--active').siblings().removeClass('category--active');
 
 		let id = $('.category').eq(index).data('id')
