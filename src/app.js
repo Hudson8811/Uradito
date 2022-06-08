@@ -7,9 +7,8 @@ $(function() {
 	console.log('Ready!')
 
 	require('scripts/slick')
-	require('scripts/jquery.touchSwipe.min')
-
 
 	require('scripts/main')
 	require('scripts/tabs')
+	require('scripts/header')
 })

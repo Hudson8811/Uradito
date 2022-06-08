@@ -36,6 +36,13 @@ li {
 .wrapper{
 	width: 100%;
 	overflow: hidden;
+	padding-top: 130px;
+	@include max(lg){
+		padding-top: 93px;
+	}
+	@include max(md){
+		padding-top: vw(71);
+	}
 }
 
 .container{
