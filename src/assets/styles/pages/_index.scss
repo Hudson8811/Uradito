@@ -143,8 +143,8 @@
 		}
 		@include max(md){
 			margin-top: vw(5);
-			font-size: vw(12);
-			line-height: vw(17);
+			font-size: vw(14);
+			line-height: vw(18);
 			max-width: vw(304);
 		}
 	}
@@ -285,7 +285,7 @@
 		margin-bottom: 6px;
 		text-align: center;
 		@include max(md){
-			font-size: vw(12);
+			font-size: vw(14);
 			line-height: vw(11);
 			margin-bottom: vw(6);
 		}
@@ -515,7 +515,7 @@
 			text-align: left;
 		}
 		@include max(md){
-			font-size: vw(13.7056);
+			font-size: vw(14);
 		}
 	}
 	&__bottom{
@@ -540,8 +540,8 @@
 			text-align: left;
 		}
 		@include max(md){
-			font-size: vw(10.9645);
-			line-height: vw(16);
+			font-size: vw(13);
+			line-height: vw(17);
 		}
 	}
 	&__btn{
@@ -550,7 +550,7 @@
 		@include max(md){
 			margin-top: vw(9);
 			padding: vw(9) vw(16);
-			font-size: vw(10.9645);
+			font-size: vw(13);
 			line-height: vw(15);
 		}
 	}
@@ -599,7 +599,7 @@
 		color: #F4AD3C;
 		margin-bottom: 12px;
 		@include max(md){
-			font-size: vw(12);
+			font-size: vw(14);
 			line-height: vw(17);
 			margin-bottom: vw(6);
 		}
@@ -626,8 +626,8 @@
 		line-height: 1.88;
 		color: #6C6C72;
 		@include max(md){
-			font-size: vw(12);
-			line-height: vw(17);
+			font-size: vw(14);
+			line-height: vw(18);
 			margin-top: vw(12);
 		}
 	}
@@ -701,7 +701,7 @@
 	@include max(md){
 		padding-left: vw(76);
 		&:not(:first-child){
-			margin-top: vw(100);
+			margin-top: vw(80);
 		}
 	}
 	&__dot{
@@ -800,7 +800,8 @@
 		letter-spacing: -0.03em;
 		color: #000000;
 		@include max(md){
-			font-size: vw(12);
+			line-height: 1.6;
+			font-size: vw(14);
 		}
 	}
 	&__text{
@@ -811,7 +812,11 @@
 		letter-spacing: -0.02em;
 		color: #6C6C72;
 		@include max(md){
-			font-size: vw(12);
+			font-size: vw(14);
+			line-height: 1.6;
+			br{
+				display: none;
+			}
 		}
 	}
 	&:nth-child(1){
@@ -948,7 +953,7 @@
 		color: #FFFFFF;
 		margin-top: 12px;
 		@include max(md){
-			font-size: vw(12.1569);
+			font-size: vw(14);
 			margin-top: vw(7);
 		}
 	}
@@ -959,7 +964,7 @@
 			margin-top: 60px;
 		}
 		@include max(md){
-			font-size: vw(12);
+			font-size: vw(14);
 			padding: vw(7) vw(25);
 			margin-top: vw(47);
 		}
@@ -1023,8 +1028,8 @@
 		color: #6C6C72;
 		margin-top: 8px;
 		@include max(md){
-			font-size: vw(12);
-			line-height: vw(17);
+			font-size: vw(14);
+			line-height: vw(18);
 			margin-top: vw(17);
 		}
 	}
@@ -1078,7 +1083,7 @@
 		text-align: center;
 		color: #FFFFFF;
 		@include max(md){
-			font-size: vw(12);
+			font-size: vw(14);
 			line-height: vw(17);
 		}
 	}
@@ -1285,7 +1290,7 @@
 		text-align: center;
 		color: #6C6C72;
 		@include max(md){
-			font-size: vw(12);
+			font-size: vw(14);
 			line-height: vw(17);
 			margin-top: vw(7);
 		}
@@ -1322,8 +1327,8 @@
 		margin-top: 6px;
 		@include max(md){
 			margin-top: vw(8);
-			font-size: vw(12);
-			line-height: vw(17);
+			font-size: vw(14);
+			line-height: vw(18);
 		}
 	}
 	&__image{
@@ -1681,7 +1686,7 @@
 		text-align: center;
 		color: #6C6C72;
 		@include max(md){
-			font-size: vw(11.5041);
+			font-size: vw(14);
 		}
 	}
 	&__btn{
@@ -1690,7 +1695,7 @@
 		@include max(md){
 			margin-top: vw(13);
 			padding: vw(8) vw(21);
-			font-size: vw(12);
+			font-size: vw(14);
 			line-height: vw(16);
 		}
 	}
