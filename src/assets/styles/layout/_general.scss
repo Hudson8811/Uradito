@@ -46,7 +46,7 @@ li {
 		max-width: 1000px;
 	}
 	@include max(lg){
-		max-width: 740px;
+		max-width: 95%;
 	}
 	@include max(md){
 		max-width: 100%;
