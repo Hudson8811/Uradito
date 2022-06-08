@@ -337,7 +337,7 @@
 		justify-content: center;
 		margin-left: -8px;
 		margin-right: -8px;
-	
+
 		@include max(md){
 			justify-content: flex-start;
 			margin-left: 0;
@@ -1349,6 +1349,14 @@
 	@include max(md){
 		margin-top: vw(31);
 	}
+	&__container{
+		@include max(lg){
+			max-width: 740px;
+		}
+		@include max(md){
+			max-width: 100%;
+		}
+	}
 	&__inner{
 		display: flex;
 		justify-content: space-between;
@@ -1493,6 +1501,16 @@
 		height: 100%;
 		pointer-events: none;
 		z-index: 5;
+		@include max(lg){
+			width: 740px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@include max(md){
+			width: 100%;
+			left: 0;
+			transform: none;
+		}
 	}
 	&__image{
 		position: absolute;
@@ -1754,8 +1772,11 @@
 	}
 	&__container{
 		max-width: 964px;
+		@include max(xl){
+			max-width: 1000px;
+		}
 		@include max(lg){
-			max-width: 740px;
+			max-width: 95%;
 		}
 		@include max(md){
 			max-width: 100%;
@@ -1765,7 +1786,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		@include max(lg){
+		@include max(md){
 			display: block;
 		}
 	}
@@ -1779,10 +1800,10 @@
 			font-weight: 700;
 		}
 		@include max(lg){
-			max-width: 100%;
-			margin-bottom: 35px;
+			max-width: calc(100% - 255px);
 		}
 		@include max(md){
+			max-width: 100%;
 			font-size: vw(16);
 			line-height: vw(23);
 			margin-bottom: vw(14);
@@ -1803,6 +1824,9 @@
 		&:hover{
 			color: $orange;
 			background: #FFFFFF;
+		}
+		@include max(lg){
+			padding: 21px 80px;
 		}
 		@include max(md){
 			font-size: vw(16);
