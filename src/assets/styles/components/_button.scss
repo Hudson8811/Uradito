@@ -11,7 +11,7 @@
 	line-height: 158%;
 	text-align: center;
 	color: #FFFFFF;
-	background: linear-gradient(314.85deg, #F4A93C 0%, #F4C03C 100%);
+	background: #F4A93C linear-gradient(314.85deg, #F4A93C 0%, #F4C03C 100%);
 	border-radius: 100px;
 	padding: 10px 30px;
 	display: inline-block;
@@ -19,5 +19,11 @@
 		font-size: vw(18);
 		border-radius: vw(100);
 		padding: vw(10) vw(30);
+	}
+	@include min(md) {
+		&:hover {
+			color: #000000;
+			background: #FEF4E2;
+		}
 	}
 }

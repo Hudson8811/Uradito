@@ -5,14 +5,30 @@ $(document).ready(function() {
 		let audio = $(this).find('audio')[0];
 		if (audio.paused == false) {
 			audio.pause();
+			$(this).removeClass('active');
 		} else {
 			$('.js-audio-control audio').each(function (){
 				if (this != audio){
 					this.pause();
 					this.currentTime = 0;
+					$(this).parent().removeClass('active');
 				}
 			})
 			audio.play();
+			$(this).addClass('active');
+		}
+	});
+
+
+	$('.js-show-lang').on('click',function (){
+		event.preventDefault();
+		$(this).parent('.lang').toggleClass('lang--active');
+	});
+
+	$(document).on('click',function (){
+		let lang = $('.lang');
+		if (!event.composedPath().includes(lang[0])) {
+			lang.removeClass('lang--active');
 		}
 	});
 

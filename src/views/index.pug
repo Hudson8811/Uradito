@@ -28,9 +28,14 @@ block content
 				.header__right
 					a.header__contact(href="") Связаться
 					a.btn.header__btn(href="") Скачать
-					.header__lang
-						a.lang__link(href="")
+					.header__lang.lang
+						a.lang__link.lang__link--curent.js-show-lang(href="javascript:;")
 							img(src=require('images/flag-for-serbia.svg') alt="serbia")
+						.lang__dropdown
+							a.lang__link(href="")
+								img(src=require('images/flag-for-serbia.svg') alt="serbia")
+							a.lang__link(href="")
+								img(src=require('images/flag-for-serbia.svg') alt="serbia")
 
 
 	section.hero
