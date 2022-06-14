@@ -1678,11 +1678,21 @@
 	}
 	&__image{
 		position: absolute;
+		width: 73px;
+		height: 73px;
+		cursor: pointer;
+		pointer-events: auto;
+		transition: transform 0.3s ease;
+		@include max(md){
+			width: vw(31);
+			height: vw(31);
+		}
 		img{
 			border-radius: 50%;
 			overflow: hidden;
 			position: relative;
 			width: 100%;
+			height: 100%;
 			&:nth-child(2){
 				position: absolute;
 				left: 0;
@@ -1696,18 +1706,24 @@
 				}
 			}
 		}
+		&--active{
+			transform: scale(1.657);
+		}
 		&:nth-child(1){
 			left: 170px;
 			top: 73px;
-			width: 108px;
 			@include max(lg){
-				display: none;
+				left: -16px;
+				top: 283px;
+			}
+			@include max(md){
+				left: vw(5);
+				top: vw(93);
 			}
 		}
 		&:nth-child(2){
 			left: -21px;
 			top: 247px;
-			width: 73px;
 			@include max(lg){
 				left: 22px;
 				top: 97px;
@@ -1715,13 +1731,11 @@
 			@include max(md){
 				left: vw(8);
 				top: vw(17);
-				width: vw(31);
 			}
 		}
 		&:nth-child(3){
 			left: 107px;
 			top: 518px;
-			width: 83px;
 			@include max(lg){
 				left: 37px;
 				top: 459px;
@@ -1729,13 +1743,11 @@
 			@include max(md){
 				left: vw(17);
 				top: vw(172);
-				width: vw(34);
 			}
 		}
 		&:nth-child(4){
 			left: 952px;
 			top: 55px;
-			width: 74px;
 			@include max(lg){
 				left: 642px;
 				top: 245px;
@@ -1743,40 +1755,33 @@
 			@include max(md){
 				left: vw(334);
 				top: vw(98);
-				width: vw(33);
 			}
 		}
 		&:nth-child(5){
 			left: 1048px;
 			top: 262px;
-			width: 122px;
 			@include max(xl){
 				left: 900px;
 			}
 			@include max(lg){
 				left: 648px;
 				top: 32px;
-				width: 82px;
 			}
 			@include max(md){
 				left: vw(303);
 				top: vw(-13);
-				width: vw(32);
 			}
 		}
 		&:nth-child(6){
 			left: 992px;
 			top: 522px;
-			width: 70px;
 			@include max(lg){
 				left: 612px;
 				top: 432px;
-				width: 60px;
 			}
 			@include max(md){
 				left: vw(316);
 				top: vw(192);
-				width: vw(39);
 				z-index: -5;
 			}
 		}
@@ -1865,6 +1870,10 @@
 		line-height: 1.48;
 		text-align: center;
 		color: #6C6C72;
+		display: inline-flex !important;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 		@include max(md){
 			font-size: vw(14);
 		}
@@ -1922,6 +1931,18 @@
 				transform: scale(0.58);
 				opacity: 0.3;
 			}
+		}
+	}
+
+	.slick-track{
+		display: flex;
+	}
+	.slick-slide{
+		display: flex;
+		height: inherit;
+		>div{
+			flex-grow: 1;
+			display: flex;
 		}
 	}
 }

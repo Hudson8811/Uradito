@@ -101,7 +101,7 @@ $(document).ready(function() {
 
 
 	$('.r-slider__items').slick({
-		speed: 600,
+		speed: 400,
 		arrows: true,
 		dots: false,
 		fade: true,
@@ -121,5 +121,14 @@ $(document).ready(function() {
 		/*infinite: false,*/
 	});
 
+	$('.r-slider__items').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$('.reviews__image').eq(nextSlide).addClass('reviews__image--active').siblings().removeClass('reviews__image--active');
+	});
+
+	$('.reviews__image').on('click',function (){
+		event.preventDefault();
+		let index = $(this).index();
+		$('.r-slider__items').slick('slickGoTo', index);
+	});
 
 });
