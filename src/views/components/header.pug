@@ -1,0 +1,27 @@
+header.header
+	.container.header__container
+		.header__row
+			.header__burger.js-show-menu
+				img(src=require('images/menu.svg') alt="")
+			.header__logo
+				img(src=require('images/logo.svg') alt="")
+			nav.header__menu.menu
+				ul.menu__ul
+					li.menu__item
+						a.menu__link(href="") Приложение
+					li.menu__item
+						a.menu__link(href="") Компаниям
+					li.menu__item
+						a.menu__link(href="") О платформе
+			.header__right
+				a.header__contact(href="") Связаться
+				a.btn.header__btn(href="") Скачать
+				.header__lang.lang
+					a.lang__link.lang__link--curent.js-show-lang(href="javascript:;")
+						img(src=require('images/flag-for-serbia.svg') alt="serbia")
+					.lang__dropdown
+						a.lang__link(href="")
+							img(src=require('images/flag-for-serbia.svg') alt="serbia")
+						a.lang__link(href="")
+							img(src=require('images/flag-for-serbia.svg') alt="serbia")
+

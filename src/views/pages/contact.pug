@@ -1,0 +1,57 @@
+extends ../layouts/master.pug
+
+block title
+	title UradiTo - Сервис поиска ответственных исполнителей
+
+block manifestBrowserconfigFiles
+	link(href='../manifest.json', rel='manifest')
+	meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+	include ../components/header.pug
+
+
+	.contact-page
+		.contact-page__bg
+			img(src=require('images/map.svg'))
+		.contact-page__container.container
+			h1.contact-page__title Сербия
+			.contact-page__address “Компания”d.o.o. <br>11000, Serbia, Belgrade, Garvila&nbsp;Principa&nbsp;43
+			.contact-page__phone +381652077356
+			.contact-page__email
+				a(href="mailto:aceleansolutions@gmail.com") aceleansolutions@gmail.com
+			.contact-page__advantages.c-advantages
+				.c-advantages__advantage
+					.c-advantages__title COMPETITIVE ADVANTAGE
+					.c-advantages__text Specialists are provided in real time. Each of them receiving a notification the moment customer creates an order within a respective category. Customers receive a guarantee in form of insurance, UradiTo customer support team, and upfront price statement.
+				.c-advantages__advantage
+					.c-advantages__title Challenge
+					.c-advantages__text Customers manually searching for  solution to their problem, not having guarantees and insurances. Businesses struggling to attract more customers, control their employees in real time and motivate them to achieve higher goals.
+				.c-advantages__advantage
+					.c-advantages__title MARKET
+					.c-advantages__text More than a 1,000,000 households that can use UradiTo in Belgrade. The unique application on the Balkan territory, providing the opportunity to grow exponentially and expand business in multiple neighbouring countries
+
+			.contact-page__flex
+				.contact-page__founders.founders
+					.founders__title Founders
+					.founders__item.founder
+						.founder__avatar
+							img(src=require('images/founder-1.png'))
+						.founder__info
+							.founder__name Alexey Makov
+							.founder__text Startup enthusiast, investor, entrepreneur
+					.founders__item.founder
+						.founder__avatar
+							img(src=require('images/founder-2.png'))
+						.founder__info
+							.founder__name Vladimir Chernyi
+							.founder__text Startup advisor, outsourcing IT company owner
+					.founders__item.founder
+						.founder__avatar
+							img(src=require('images/founder-3.png'))
+						.founder__info
+							.founder__name Luka Vukovic
+							.founder__text Sales and Marketing operations in	multinational FMCG business
+				.contact-page__map
+					.contact-page__map-inner#contactMap
