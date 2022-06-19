@@ -10,15 +10,23 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
-//const ASSET_PATH = process.env.ASSET_PATH || '/'
-const ASSET_PATH = ''
+const ASSET_PATH = process.env.ASSET_PATH || '/'
+//const ASSET_PATH = ''
 
 // Files
 const utils = require('./utils')
 
+
+
+
 // Configuration
 module.exports = (env) => {
-
+	let PATH_DIST = "";
+	let PATH_FOLDER = "../dist";
+	if (env.distr){
+		PATH_DIST = ASSET_PATH;
+		PATH_FOLDER = "../for-server";
+	}
 	// Get default mode from env
 	const MODE = env.mode || 'production';
 
@@ -31,8 +39,8 @@ module.exports = (env) => {
 			app: path.join(__dirname, '../src/app.js'),
 		},
 		output: {
-			publicPath: ASSET_PATH,
-			path: path.join(__dirname, '../dist'),
+			publicPath: PATH_DIST,
+			path: path.join(__dirname, PATH_FOLDER),
 			filename: 'assets/js/[name].[contenthash:7].bundle.js'
 		},
 		devServer: {
