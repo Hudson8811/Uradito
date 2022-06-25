@@ -1,6 +1,9 @@
 .contact-page{
 	padding: 60px 0;
 	position: relative;
+	@include max(md){
+		padding: vw(32) 0 vw(54);
+	}
 	&__bg{
 		width: 1266px;
 		position: absolute;
@@ -8,6 +11,10 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: -1;
+		max-width: calc(100% - 40px);
+		@include max(md){
+			top: vw(32);
+		}
 		img{
 			width: 100%;
 			display: block;
@@ -21,6 +28,11 @@
 		line-height: 92px;
 		color: #000000;
 		margin-bottom: 16px;
+		@include max(md){
+			font-size: vw(38);
+			line-height: vw(55);
+			margin-bottom: vw(9);
+		}
 	}
 	&__address{
 		font-style: normal;
@@ -29,6 +41,9 @@
 		line-height: 1.48;
 		color: #000000;
 		opacity: 0.7;
+		@include max(md){
+			font-size: vw(18);
+		}
 	}
 	&__phone{
 		font-family: $thirdfont;
@@ -38,11 +53,19 @@
 		color: #000000;
 		opacity: 0.7;
 		margin-top: 16px;
+		@include max(md){
+			margin-top: vw(17);
+			font-size: vw(18);
+			line-height: vw(21);
+		}
 	}
 	&__email{
 		margin-top: 6px;
 		font-family: $thirdfont;
 		position: relative;
+		@include max(md){
+			margin-top: vw(4);
+		}
 		&::before{
 			content: "";
 			display: block;
@@ -53,6 +76,9 @@
 			position: absolute;
 			left: 30px;
 			bottom: -41px;
+			@include max(md){
+				display: none;
+			}
 		}
 		a{
 			font-weight: 600;
@@ -61,21 +87,38 @@
 			color: #F4A93C;
 			text-decoration: none;
 			cursor: pointer;
+			@include max(md){
+				font-size: vw(18);
+				line-height: vw(21);
+			}
 		}
 	}
 	&__advantages{
 		margin-top: 76px;
+		@include max(md){
+			margin-top: vw(50);
+		}
 	}
 	&__flex{
 		display: flex;
 		justify-content: space-between;
 		margin-top: 70px;
+		@include max(md){
+			margin-top: vw(50);
+			display: block;
+		}
 	}
 	&__map{
 		width: calc(100% - 360px);
 		max-width: 842px;
 		padding-top: 52px;
 		display: flex;
+		@include max(md){
+			width: 100%;
+			max-width: none;
+			height: vw(345);
+			padding-top: vw(52);
+		}
 		&-inner{
 			width: 100%;
 			overflow: hidden;
@@ -83,28 +126,68 @@
 			background: #EFE9E1;
 			position: relative;
 			left: 54px;
+			@include max(xl){
+				left: 0;
+			}
+			@include max(md){
+				height: 100%;
+				border-radius: vw(24);
+			}
+
+			iframe{
+				width: 100% !important;
+				height: 100% !important;
+				object-fit: cover;
+				display: block;
+			}
 		}
 	}
 	&__founders{
 		flex-shrink: 0;
 		width: 330px;
+		@include max(md){
+			width: 100%;
+		}
 	}
 }
 
 .c-advantages{
 	display: flex;
+	@include max(md){
+		margin-top: vw(50);
+		display: block;
+	}
 	&__advantage{
 		&:nth-child(1){
 			width: 318px;
+			@include max(md){
+				width: vw(318);
+			}
 		}
 		&:nth-child(2){
 			width: 280px;
+			@include max(md){
+				width: vw(280);
+			}
 		}
 		&:nth-child(3){
 			width: 309px;
+			@include max(md){
+				width: vw(309);
+			}
 		}
 		&:not(:first-child){
 			margin-left: 135px;
+			@include max(xl){
+				margin-left: 100px;
+			}
+			@include max(lg){
+				margin-left: 50px;
+			}
+			@include max(md){
+				margin-left: 0;
+				margin-top: vw(24);
+			}
 		}
 	}
 	&__title{
@@ -116,6 +199,10 @@
 		text-transform: uppercase;
 		color: #000000;
 		white-space: nowrap;
+		@include max(md){
+			font-size: vw(24);
+			line-height: vw(28);
+		}
 	}
 	&__text{
 		font-family: $thirdfont;
@@ -125,6 +212,11 @@
 		color: #000000;
 		opacity: 0.7;
 		margin-top: 24px;
+		@include max(md){
+			font-size: vw(16);
+			line-height: vw(19);
+			margin-top: vw(24);
+		}
 	}
 }
 
@@ -138,11 +230,19 @@
 		text-transform: uppercase;
 		color: #000000;
 		margin-bottom: 24px;
+		@include max(md){
+			font-size: vw(24);
+			line-height: vw(28);
+			margin-bottom: vw(24);
+		}
 	}
 	&__item{
 		width: 100%;
 		+ .founders__item {
 			margin-top: 16px;
+			@include max(md){
+				margin-top: vw(16);
+			}
 		}
 	}
 }
@@ -153,6 +253,10 @@
 	padding: 8px;
 	display: flex;
 	align-items: center;
+	@include max(md){
+		border-radius: vw(100);
+		padding: vw(8);
+	}
 	&__avatar{
 		width: 64px;
 		height: 64px;
@@ -160,6 +264,11 @@
 		border-radius: 50%;
 		overflow: hidden;
 		margin-right: 16px;
+		@include max(md){
+			margin-right: vw(16);
+			width: vw(64);
+			height: vw(64);
+		}
 		img{
 			display: block;
 			width: 100%;
@@ -174,6 +283,10 @@
 		font-size: 24px;
 		line-height: 28px;
 		color: #FFFFFF;
+		@include max(md){
+			font-size: vw(24);
+			line-height: vw(28);
+		}
 	}
 	&__text{
 		font-family: $thirdfont;
@@ -182,5 +295,10 @@
 		line-height: 17px;
 		color: #FFFFFF;
 		margin-top: 2px;
+		@include max(md){
+			font-size: vw(14);
+			line-height: vw(17);
+			margin-top: vw(2);
+		}
 	}
 }

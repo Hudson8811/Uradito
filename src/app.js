@@ -1,6 +1,7 @@
 /* src/app.js */
 
 // Styles
+import 'swiper/css/bundle';
 import 'styles/_app.scss'
 
 $(function() {
@@ -11,4 +12,5 @@ $(function() {
 	require('scripts/main')
 	require('scripts/tabs')
 	require('scripts/header')
+	require('scripts/phones-slider')
 })

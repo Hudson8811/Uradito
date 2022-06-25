@@ -1,26 +1,24 @@
 //- src/views/components/footer.pug
 
-
 footer.footer
 	.container.footer__container
-		.footer__row
-			.footer__left
-				.footer__logo
-					img(src=require('images/logo-footer.svg') alt="")
-				.footer__contacts “Компания”d.o.o. <br>11000, Serbia, Belgrade, Garvila Principa 43
+		.footer__logo
+			img(src=require('images/logo-footer.svg') alt="")
+		.footer__top
+			.footer__contacts “Компания”d.o.o. <br>11000, Serbia, Belgrade, Garvila Principa 43
 			nav.footer__menu.fmenu
 				ul.fmenu__ul
 					li.fmenu__item
 						a.fmenu__link(href="") О платформе
 					li.fmenu__item
 						a.fmenu__link(href="") Для компаний
-					li.fmenu__item
-						a.fmenu__link(href="") Соглашение
-					li.fmenu__item
-						a.fmenu__link(href="") Персональные данные
-					li.fmenu__item
-						a.fmenu__link(href="")
-
+			.footer__right
+				.footer__socials.fsocials
+					a.fsocials__item(href="" rel="nofollow")
+						img(src=require('images/footer-soc-fb.svg') alt="")
+					a.fsocials__item(href="" rel="nofollow")
+						img(src=require('images/footer-soc-insta.svg') alt="")
+				a.footer__btn(href="") Написать нам
 		.footer__scroll
 			.footer__companies
 				.footer__company
@@ -37,3 +35,14 @@ footer.footer
 					img(src=require('images/com-6.svg') alt="")
 				.footer__company
 					img(src=require('images/com-7.svg') alt="")
+		.footer__bottom
+			.footer__bottom-left
+				a(href="") Privacy policy
+				a(href="") Terms & Conditions
+			.footer__bottom-center
+				| Powered by
+				img(src=require('images/footer-dev.svg') alt="")
+				| Appomart
+			.footer__bottom-right
+				a(href="tel:+78987654321") +78987654321
+				a(href="mailto:mail@appomart.com") mail@appomart.com

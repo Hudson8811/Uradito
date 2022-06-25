@@ -23,6 +23,8 @@
 */
 @import './components/footer';
 @import './components/button';
+@import './components/header';
+@import './components/phone-slider';
 
 /*
   Layout
@@ -34,3 +36,4 @@
 */
 @import './pages/index';
 @import './pages/contact';
+@import './pages/about';

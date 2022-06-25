@@ -23,9 +23,13 @@ const utils = require('./utils')
 module.exports = (env) => {
 	let PATH_DIST = "";
 	let PATH_FOLDER = "../dist";
+	let TYPE = 2;
 	if (env.distr){
 		PATH_DIST = ASSET_PATH;
 		PATH_FOLDER = "../for-server";
+	}
+	if (env.type){
+		TYPE = 1;
 	}
 	// Get default mode from env
 	const MODE = env.mode || 'production';
@@ -55,6 +59,7 @@ module.exports = (env) => {
 				images: path.join(__dirname, '../src/assets/images'), // Relative path of images
 				fonts: path.join(__dirname, '../src/assets/fonts'), // Relative path of fonts
 				audio: path.join(__dirname, '../src/assets/audio'),
+				video: path.join(__dirname, '../src/assets/video'),
 			}
 		},
 
@@ -123,6 +128,13 @@ module.exports = (env) => {
 					generator: {
 						filename: 'assets/audio/[name].[contenthash:7][ext]'
 					},
+				},
+				{
+					test: /\.(mp4)(\?.*)?$/,
+					type: 'asset/resource',
+					generator: {
+						filename: 'assets/video/[name].[contenthash:7][ext]'
+					},
 				}
 				/*{
 					test: /\.(mp4)(\?.*)?$/,
@@ -188,7 +200,7 @@ module.exports = (env) => {
 			}),
 
 			// Other pages
-			...utils.pages(MODE), // mode
+			...utils.pages(MODE,'',TYPE), // mode
 
 			new webpack.ProvidePlugin({
 				$: 'jquery',

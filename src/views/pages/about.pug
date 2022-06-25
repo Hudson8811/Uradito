@@ -1,0 +1,632 @@
+extends ../layouts/master.pug
+
+block title
+	title UradiTo - Сервис поиска ответственных исполнителей
+
+block manifestBrowserconfigFiles
+	link(href='../manifest.json', rel='manifest')
+	meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+	section.about-hero
+		include ../components/header--inner.pug
+		.about-hero__video
+			video.block-video__player(autoplay, loop, muted)
+				source(src=require('video/sample.mp4') type="video/mp4")
+		.about-hero__container.container
+			.about-hero__content
+				h1.about-hero__title Сервис подбора специалистов: <br>Находите заказчиков в 3 раза быстрее
+				.about-hero__text Добавьте сотрудников на платформу Uradi To за&nbsp;5&nbsp;минут, чтобы увеличить число заказов до 10 раз
+				.about-hero__bottom
+					a.btn.about-hero__btn(href="") Добавить компанию
+
+
+	section.advantages
+		.container.advantages__container
+			.advantages__row
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-5.svg') alt="")
+					.advantage__label Первый подобный <br>проект в Сербии
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-6.svg') alt="")
+					.advantage__label Весь менеджмент <br>в веб-интерфейсе
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-2.svg') alt="")
+					.advantage__label Доступ и <br>техподдержка 24/7
+				.advantages__advantage.advantage
+					.advantage__icon
+						img(src=require('images/why-7.svg') alt="")
+					.advantage__label Все нужное бизнесу <br>в одном приложении
+
+
+	section.phones-slider
+		.phones-slider__conteiner.container
+			.phones-slider__title Вид изнутри и принципы работы сервиса
+			.phones-slider__text Uradi To — первая платформа в Сербии, где клиенты и исполнители найдут друг друга без проблем.	<br>Как это выглядит со стороны заказчика услуг:
+
+			.phones-slider__content.triple-slider
+				.triple-slider__main
+					.triple-slider__main-inner.swiper
+						.swiper-wrapper
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+
+				.triple-slider__back
+					.triple-slider__back-inner.swiper
+						.swiper-wrapper
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+
+				.triple-slider__text
+					.triple-slider__text-inner.swiper
+						.swiper-wrapper
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Установка приложения
+									.triple-slider__text-text Версия доступна для любых устройств в Google Play и App Store.
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Удаление приложения
+									.triple-slider__text-text Удалить легко
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Мои заказы
+									.triple-slider__text-text Список заказов в приложении
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Установка приложения
+									.triple-slider__text-text Версия доступна для любых устройств в Google Play и App Store.
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Удаление приложения
+									.triple-slider__text-text Удалить легко
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Мои заказы
+									.triple-slider__text-text Список заказов в приложении
+
+				.triple-slider__arrow.triple-slider__arrow--prev
+				.triple-slider__arrow.triple-slider__arrow--next
+			.phones-slider__bottom
+				a.btn.phones-slider__btn(href="") Скачать презентацию
+
+
+	section.phones-slider.phones-slider--2
+		.phones-slider__conteiner.container
+			.phones-slider__title Со стороны компании со штатом <br>исполнителей сервис выглядит иначе.
+			.phones-slider__text В результате вы лишь заполняете все данные сотрудников максимально подробно, следите за качеством и эффективностью каждого исполнителя, при необходимости перераспределяете работу, а заказы сами поступают к вам.
+
+			.phones-slider__content.triple-slider
+				.triple-slider__main
+					.triple-slider__main-inner.swiper
+						.swiper-wrapper
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__main-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+
+				.triple-slider__back
+					.triple-slider__back-inner.swiper
+						.swiper-wrapper
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-1.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-2.png') alt="")
+							.triple-slider__back-item.swiper-slide
+								img(src=require('images/slider-phone-3.png') alt="")
+
+				.triple-slider__text
+					.triple-slider__text-inner.swiper
+						.swiper-wrapper
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Заполнение профилей
+									.triple-slider__text-text Для каждого сотрудника создается собственная страница, где указываются все необходимые данные: специализация, фотография, навыки, район работы и прочее.
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Удаление приложения
+									.triple-slider__text-text Удалить легко
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Мои заказы
+									.triple-slider__text-text Список заказов в приложении
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Заполнение профилей
+									.triple-slider__text-text Для каждого сотрудника создается собственная страница, где указываются все необходимые данные: специализация, фотография, навыки, район работы и прочее.
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Удаление приложения
+									.triple-slider__text-text Удалить легко
+							.triple-slider__text-item.swiper-slide
+								.triple-slider__text-content
+									.triple-slider__text-title Мои заказы
+									.triple-slider__text-text Список заказов в приложении
+
+				.triple-slider__arrow.triple-slider__arrow--prev
+				.triple-slider__arrow.triple-slider__arrow--next
+			.phones-slider__bottom
+				a.btn.phones-slider__btn(href="") Скачать презентацию
+
+	section.roket
+		.roket__top
+			.roket__background
+				picture
+					source(srcset=require('images/rocet-mobile.svg') media="(max-width: 767px)")
+					img(src=require('images/rocet.svg') alt="")
+			.roket__conteiner.container
+				.roket__title Интерактивное будущее: <br>динамичный график роста Uradi To
+				.roket__text
+					| Это первый подобный сервис по поиску исполнителей и заказчиков в Сербии. Поэтому уже сейчас Uradi To активно завоевывает рынок. Потенциал платформы — более 1 000 000 домохозяйств. Значит, вы получаете регулярные заказы и обеспечиваете постоянной работой своих сотрудников.
+					| Регулярное инвестирование чистой прибыли сервиса направляется на привлечение
+					| новых пользователей на сервис. То есть ваша компания будет получать поток
+					| заявок без дополнительного рекламного бюджета с вашей стороны.
+					| Никаких вложений и рисков, сервис сам инвестирует в вас.
+		.roket__bottom
+			.roket__conteiner.container
+				.roket__bottom-inner
+					a.roket__bottom-btn(href="") Присоединиться
+					.roket__bottom-text Используются, как традиционные каналы рекламы, например, реклама на ТВ, так и современные подходы, такие как SMM, продвижение в AppStore, Google Play, Outdoor и другие. Каждый житель Сербии узнает о вас, компании и услугах, предоставляемых вашими специалистами.
+
+	section.work-call
+		.work-call__conteiner.container
+			.work-call__flex
+				.work-call__left
+					.work-call__img
+						img(src=require('images/work-call.svg') alt="")
+				.work-call__right
+					.work-call__title Работа зовет: 458 открытых объявлений в 40+ категориях
+					.work-call__text
+						| Клиенты уже заждались вас. Выбирайте раздел, соответствующий вашей нише, выбирайте понравившиеся заказы и начинайте работать. Зарабатывайте сразу же после регистрации.
+						br
+						br
+						| Или заполняйте профили сотрудников и получайте заявки от заинтересованных клиентов ежедневно. Ставьте собственные цены, выбирайте удобные районы для выполнения работы, получайте положительные отзывы и формируйте доверие к вашей компании.
+						br
+						br
+						| Посмотрите, где сейчас требуются исполнители, и начинайте зарабатывать.
+
+	section.specialists
+		.container.specialists__container
+			.specialists__categories.categories
+				.categories__inner
+					.categories__nav.categories__nav--left.js-prev-category
+					.categories__list
+						.categories__category.category.category--active.js-set-category(data-id="1")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-1.svg'))
+								.category__label Уборка
+						.categories__category.category.js-set-category(data-id="2")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-2.svg'))
+								.category__label Ремонт техники
+						.categories__category.category.js-set-category(data-id="3")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-3.svg'))
+								.category__label Финансы
+						.categories__category.category.js-set-category(data-id="4")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-4.svg'))
+								.category__label Фотография
+						.categories__category.category.js-set-category(data-id="5")
+							.category__inner
+								.category__icon
+									img(src=require('images/cat-5.svg'))
+								.category__label Репетитор
+					.categories__nav.categories__nav--right.js-next-category
+			.specialists__items
+
+				.specialists__item.specialist.specialist--active(data-id="1")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar-2.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--active.specialist--center(data-id="1")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--active(data-id="1")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar-3.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="2")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz2
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="2")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz2
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="2")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz2
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="3")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz3
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="3")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz3
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="3")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz3
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="4")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz4
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="4")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz4
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="4")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz4
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+				.specialists__item.specialist(data-id="5")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz5
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist.specialist--center(data-id="5")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz5
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+				.specialists__item.specialist(data-id="5")
+					.specialist__top
+						.specialist__avatar
+							img(src=require('images/avatar.png') alt="")
+						.specialist__info
+							.specialist__name Cooper Lipshutz5
+							.specialist__category Категория
+					.specialist__bottom
+						.specialist__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+						a.specialist__btn.btn(href="") Подробнее
+
+
+
+
+	section.form-banner
+		.form-banner__container.container
+			.form-banner__inner
+				.form-banner__left
+					.form-banner__title Получайте до 20 заявок в день
+					.form-banner__text Без лишних трат на рекламу
+						form.form-banner__form
+							.form-banner__form-row
+								.form-banner__form-input
+									input(type="text" name="" placeholder="Ваше имя" required)
+								.form-banner__form-input
+									input(type="text" name="" placeholder="Ваш телефон" required)
+							.form-banner__form-row
+								button.form-banner__form-btn(type="submit") Зарегистрироваться
+				.form-banner__right
+					.form-banner__img
+						picture
+							source(srcset=require('images/get-20-mobile.svg') media="(max-width: 767px)")
+							img(src=require('images/get-20.svg') alt="")
+
+
+	section.stages
+		.container.stages__container
+			.stages__top
+				.stages__top-item
+					img(src=require('images/sstep-mob-1.svg') alt="")
+				.stages__top-item
+					img(src=require('images/sstep-mob-2.svg') alt="")
+				.stages__top-item
+					img(src=require('images/sstep-mob-3.svg') alt="")
+			.stages__slider
+				.stages__inner
+					.stages__row
+						.stages__left
+							.stages__text
+								p Все для управления сотрудников в одном интерфейсе:
+								ul
+									li Доступ с любого устройства. Никаких сложных программ, все данные всегда под рукой.
+									li Удобный интерфейс. Все понятно и прозрачно, в случае необходимости сотрудники поддержки помогут решить вопрос.
+									li Менеджмент. Данные о заявках, загруженности, выполненных заказах собрано в личном кабинете. Перераспределяйте работу, оценивайте качества работы каждого подчиненного.
+									li Аналитика. Удобные графики, сводные отчеты помогут прогнозировать рост прибыли компании, выявлять слабые места.
+								p Регистрируйтесь на платформе, заполняйте профили сотрудников и начинайте получать заказы сегодня.
+						.stages__icon
+							img(src=require('images/sstep-1.svg') alt="")
+						.stages__right
+							.stages__title Контролируйте сотрудников <br>и ход работ онлайн 24/7
+					.stages__row
+						.stages__left
+							.stages__text
+								p Платформа поможет отследить работу каждого сотрудника: количество выполненных заказов, отзывы от клиентов, эффективность работы, общую прибыль, полученную для компании. Так вы всегда будете знать, кто из подчиненных работает эффективно.
+								p Чтобы получать премии, сотрудник сам будет стремиться выполнять заказы быстро и качественно. Ведь высокие оценки в приложении обеспечивают больше заявок с высоким чеком. Здоровая внутренняя конкуренция в коллективе сделает компанию еще сильнее, привлекательнее, известнее.
+						.stages__icon
+							img(src=require('images/sstep-2.svg') alt="")
+						.stages__right
+							.stages__title.stages__title--mob-line Создавайте здоровую конкуренцию внутри <br>компании и повышайте качество услуг
+					.stages__row
+						.stages__left
+							.stages__text
+								p Хватит тратить силы, время, деньги на постоянную раскрутку и продвижение по десяткам каналов. Сервис Uradi To берет это на себя. Вы добавляете и заполняете профили, а заказы регулярно поступают к вам без лишних трат.
+								p Охват платформы, реклама на 10+ площадках обеспечат вас и ваших сотрудников работой без вложений и дополнительного продвижения.
+						.stages__icon
+							img(src=require('images/sstep-3.svg') alt="")
+						.stages__right
+							.stages__title Дешевле и проще рекламы: <br>сервис сам продвигает вас
+
+	section.garants.garants--no-margin
+		.container.garants__container
+			.garants__inner
+				.garants__title Возможности для бизнеса в Uradi To
+				.garants__text Развивайте компанию по-новому и получайте больше заявок и прибыли.
+				.garants__slider
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-2.svg') alt="")
+						.garant__title Делокализация бизнеса
+						.garant__text У ваших сотрудников нет ограничений в виде одного города или района. При подключении к платформе у них есть возможность работать из любой точки Сербии.
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Страховка
+						.garant__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Безопасные платежи
+						.garant__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit.
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Страховка
+						.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
+					.garants__slide.garant
+						.garant__icon
+							img(src=require('images/garant-1.svg') alt="")
+						.garant__title Безопасные платежи
+						.garant__text Оплачивайте столько, сколько было укзано <br>в заявке с помощью банковской карты
+				.garants__comment Станьте лидером в своей отрасли, регистрируйтесь в Uradi To.
+
+
+	section.profit
+		.container.profit__container
+			.profit__title 2345 пользователей решают задачи и достигают <br>бизнес-целей с сервисом
+			.profit__text О сервисе Uradi To говорят везде: по телевидению, в интернете, на кухне за кружкой чая. Его рекомендуют, скачивают тысячи раз за день и обращаются за теми или иными услугами к исполнителям. Вот что о платформе пишут те, кто уже оценил ее возможности и преимущества.
+			.profit__image
+				img(src=require('images/prof.jpg') alt="")
+
+
+	section.audios
+		.container.audios__container
+			.audios__inner
+				.audios__item.audio
+					.audio__top
+						.audio__avatar
+							img(src=require('images/avatar-4.png') alt="")
+						.audio__info
+							.audio__name Cooper Lipshutz
+							.audio__category Категория
+					.audio__player.js-audio-control
+						audio(preload="none")
+							source(src=require('audio/test.mp3') type="audio/mpeg")
+				.audios__item.audio
+					.audio__top
+						.audio__avatar
+							img(src=require('images/avatar-5.png') alt="")
+						.audio__info
+							.audio__name Cooper Lipshutz
+							.audio__category Категория
+					.audio__player.js-audio-control
+						audio(preload="none")
+							source(src=require('audio/test.mp3') type="audio/mpeg")
+				.audios__item.audio
+					.audio__top
+						.audio__avatar
+							img(src=require('images/avatar-6.png') alt="")
+						.audio__info
+							.audio__name Cooper Lipshutz
+							.audio__category Категория
+					.audio__player.js-audio-control
+						audio(preload="none")
+							source(src=require('audio/test.mp3') type="audio/mpeg")
+
+
+	section.reviews
+		.container.reviews__container
+			.reviews__title Отзывы заказчиков
+			.reviews__images
+				.reviews__image.reviews__image--active
+					img(src=require('images/rev-1.png') alt="")
+					img(src=require('images/rev-1.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-2.png') alt="")
+					img(src=require('images/rev-2.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-3.png') alt="")
+					img(src=require('images/rev-3.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-4.png') alt="")
+					img(src=require('images/rev-4.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-5.png') alt="")
+					img(src=require('images/rev-5.png') alt="")
+				.reviews__image
+					img(src=require('images/rev-6.png') alt="")
+					img(src=require('images/rev-6.png') alt="")
+			.reviews__slider.r-slider
+				.r-slider__content
+					.r-slider__back
+					.r-slider__items
+						.r-slider__item
+							div
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
+							a.r-slider__btn.btn(href="") Спросить лично
+						.r-slider__item
+							div
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							a.r-slider__btn.btn(href="") Спросить лично
+						.r-slider__item
+							div
+								p Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
+							a.r-slider__btn.btn(href="") Спросить лично
+						.r-slider__item
+							div
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae.
+							a.r-slider__btn.btn(href="") Спросить лично
+						.r-slider__item
+							div
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
+							a.r-slider__btn.btn(href="") Спросить лично
+						.r-slider__item
+							div
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitaeLorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae..
+							a.r-slider__btn.btn(href="") Спросить лично
+				.r-slider__nav
+					.r-slider__arrow.r-slider__arrow--left.js-review-prev
+					.r-slider__arrow.r-slider__arrow--right.js-review-next
+
+	section.form-banner.form-banner--small-padding
+		.form-banner__container.container
+			.form-banner__inner
+				.form-banner__left
+					.form-banner__title Будьте №1 в своей нише
+					.form-banner__text Получайте заказы онлайн каждый день
+						form.form-banner__form
+							.form-banner__form-row
+								.form-banner__form-input
+									input(type="text" name="" placeholder="Ваше имя" required)
+								.form-banner__form-input
+									input(type="text" name="" placeholder="Ваш телефон" required)
+							.form-banner__form-row
+								button.form-banner__form-btn(type="submit") Добавить компанию
+				.form-banner__right
+					.form-banner__img
+						picture
+							source(srcset=require('images/be-1-mobile.svg') media="(max-width: 767px)")
+							img(src=require('images/be-1.svg') alt="")

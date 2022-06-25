@@ -1,223 +1,5 @@
 /* src/assets/styles/pages/_index.scss  */
 
-
-
-.menu{
-	&__ul{
-		display: flex;
-		align-items: center;
-	}
-	&__item{
-		padding: 0 21px;
-		a{
-			font-size: 18px;
-			line-height: 158%;
-			color: #000000;
-			&:hover{
-				color: $orange;
-			}
-		}
-	}
-}
-
-.header{
-	padding: 44px 0 26px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: #ffffff;
-	z-index: 100;
-	border-bottom: 1px solid transparent;
-	transition: padding 0.2s ease-in-out;
-	@include max(lg){
-		border-bottom: 1px solid #F2F2F2;
-		padding: 15px 0 15px;
-	}
-	@include max(md){
-		position: fixed;
-		padding: vw(12) 0 vw(8);
-	}
-	&__row{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	&__logo{
-		margin-right: 59px;
-		@include max(lg){
-			margin-right: 0;
-		}
-		@include max(md){
-			width: vw(133);
-		}
-		img{
-			max-width: 100%;
-			@include max(md){
-				width: 100%;
-			}
-		}
-	}
-	&__burger{
-		display: none;
-		@include max(lg){
-			display: flex;
-			text-align: center;
-			justify-content: center;
-		}
-		@include max(md){
-			width: vw(24);
-			img{
-				width: 100%;
-			}
-		}
-	}
-	&__menu{
-		@include max(lg){
-			display: none;
-		}
-	}
-	&__right{
-		display: flex;
-		align-items: center;
-	}
-	&__contact{
-		font-size: 18px;
-		line-height: 158%;
-		color: #000000;
-		margin-right: 39px;
-		&:hover{
-			color: $orange;
-		}
-		@include max(lg){
-			display: none;
-		}
-	}
-	&__btn{
-		margin-right: 32px;
-		padding: 10px 35px;
-		@include max(lg){
-			display: none;
-		}
-	}
-	&__lang{
-
-	}
-
-	&--fixed{
-		position: fixed;
-		padding: 20px 0 26px;
-		border-bottom: 1px solid #F2F2F2;
-		@include max(lg){
-			border-bottom: 1px solid #F2F2F2;
-			padding: 5px 0 5px;
-		}
-		@include max(md){
-			padding: 0;
-		}
-		@include min(md){
-			transform: translateY(-100%);
-		}
-	}
-	&--show{
-		@include min(md){
-			transform: translateY(0);
-		}
-	}
-	&--animate{
-		@include min(md){
-			transition: 0.3s ease-in-out;
-		}
-	}
-
-}
-
-.lang{
-	position: relative;
-	&__dropdown{
-		position: absolute;
-		top: -13px;
-		left: -13px;
-		padding: 61px 13px 13px;
-		width: calc(100% + 26px);
-		pointer-events: none;
-		transition: 0.3s ease-in-out;
-		transform: scale(0);
-		opacity: 0;
-		transform-origin: center 28px;
-		@include max(md){
-			top: vw(-10);
-			left: vw(-10);
-			padding: vw(48) vw(10) vw(10);
-			width: calc(100% + 5.333vw);
-			transform-origin: center vw(22);
-		}
-		&::before{
-			content: "";
-			display: block;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			z-index: -1;
-			background: #FFFFFF;
-			box-shadow: 0 0.768965px 7.68965px rgba(0, 0, 0, 0.1);
-			border-radius: 100px;
-			@include max(md){
-				box-shadow: 0 vw(0.768965) vw(7.68965) rgba(0, 0, 0, 0.1);
-				border-radius: vw(100);
-			}
-		}
-	}
-	&__link{
-		width: 32px;
-		height: 32px;
-		display: block;
-		cursor: pointer;
-		border-radius: 50%;
-		@include max(md){
-			width: vw(24);
-			height: vw(24);
-			img{
-				height: 100%;
-				width: 100%;
-				object-fit: contain;
-			}
-		}
-
-		+.lang__link{
-			margin-top: 16px;
-			@include max(md){
-				margin-top: vw(12);
-			}
-		}
-
-		&--curent{
-			position: relative;
-			z-index: 2;
-		}
-	}
-
-	&--active{
-		.lang{
-			&__link{
-				&--curent{
-					outline: 2px solid #DFDFDF;
-				}
-			}
-			&__dropdown{
-				pointer-events: auto;
-				transform: scale(1);
-				opacity: 1;
-			}
-		}
-	}
-}
-
-
-
 .hero{
 	&__container{
 		position: relative;
@@ -1199,6 +981,7 @@
 		line-height: 1.51;
 		text-align: center;
 		color: #FFFFFF;
+		min-height: 2em;
 		@include max(lg){
 			font-size: 28px;
 			line-height: 1.33;
@@ -1215,6 +998,7 @@
 		line-height: 1.33;
 		text-align: center;
 		color: #FFFFFF;
+		min-height: 2.66em;
 		@include max(md){
 			font-size: vw(14);
 			line-height: vw(17);
@@ -1366,6 +1150,10 @@
 			}
 		}
 	}
+
+	&--no-margin{
+		margin-top: 0;
+	}
 }
 
 .garant{
@@ -1422,6 +1210,10 @@
 		line-height: 1.5;
 		text-align: center;
 		color: #6C6C72;
+
+		max-width: 650px;
+		margin-left: auto;
+		margin-right: auto;
 		@include max(md){
 			font-size: vw(14);
 			line-height: vw(17);
@@ -1458,6 +1250,7 @@
 		line-height: 1.8;
 		color: #6C6C72;
 		margin-top: 6px;
+		max-width: 1070px;
 		@include max(md){
 			margin-top: vw(8);
 			font-size: vw(14);
