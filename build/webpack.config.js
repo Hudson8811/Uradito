@@ -130,7 +130,7 @@ module.exports = (env) => {
 					},
 				},
 				{
-					test: /\.(mp4)(\?.*)?$/,
+					test: /\.(mp4|webm)(\?.*)?$/,
 					type: 'asset/resource',
 					generator: {
 						filename: 'assets/video/[name].[contenthash:7][ext]'
